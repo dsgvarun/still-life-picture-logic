@@ -1,0 +1,128 @@
+/*
+ * Still Life: Picture Logic — legal and support pages.
+ *
+ * Palette taken from the app's own DESIGN.md so these pages read as part of the product rather than
+ * as a bolted-on legal obligation: warm paper, warm-shifted ink, clay accent.
+ *
+ * No webfonts. A privacy policy has to load for anyone, on anything, including a reviewer on a bad
+ * connection — and a system font stack costs nothing and never fails.
+ */
+
+:root {
+  --paper: #e9e7e1;
+  --surface: #f7f6f2;
+  --ink: #141310;
+  --ink-quiet: #55524c;
+  --rule: #d9d6cf;
+  --rule-strong: #b4b0a7;
+  --accent: #b0413e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #17171a;
+    --surface: #1e1e22;
+    --ink: #eceae4;
+    --ink-quiet: #a9a59c;
+    --rule: #32323a;
+    --rule-strong: #4a4a54;
+    --accent: #e08a72;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.62;
+}
+
+.wrap {
+  /* ~68 characters at this size — a readable measure for prose people are obliged to read. */
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 5rem;
+}
+
+header { border-bottom: 1px solid var(--rule); padding-bottom: 1.5rem; margin-bottom: 2.5rem; }
+
+.wordmark { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; margin: 0; }
+.qualifier {
+  margin: 0.25rem 0 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-quiet);
+}
+
+nav { margin-top: 1.25rem; display: flex; gap: 1.25rem; flex-wrap: wrap; }
+nav a {
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-quiet);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+nav a:hover, nav a:focus { color: var(--ink); border-bottom-color: var(--rule-strong); }
+nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--accent); }
+
+h1 { font-size: 1.9rem; line-height: 1.18; letter-spacing: -0.015em; margin: 0 0 0.5rem; text-wrap: balance; }
+h2 {
+  font-size: 1.12rem;
+  margin: 2.75rem 0 0.6rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--rule);
+  text-wrap: balance;
+}
+h3 { font-size: 0.98rem; margin: 1.6rem 0 0.4rem; }
+
+.updated { color: var(--ink-quiet); font-size: 0.85rem; margin: 0 0 2rem; }
+
+p, li { margin: 0 0 0.9rem; }
+ul { padding-left: 1.15rem; }
+li { padding-left: 0.15rem; }
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+strong { font-weight: 650; }
+
+/* Plain-language summary at the top of the policy. Not a legal device — just the honest short
+   version, because a policy nobody reads protects nobody. */
+.summary {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 1.1rem 1.25rem 0.4rem;
+  margin: 0 0 2.25rem;
+}
+.summary p:first-child { margin-top: 0; }
+.summary ul { margin-bottom: 0.9rem; }
+
+table { width: 100%; border-collapse: collapse; margin: 0 0 1.25rem; font-size: 0.95rem; }
+th, td { text-align: left; padding: 0.55rem 0.7rem 0.55rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-quiet); font-weight: 600; }
+
+/* Long tables must scroll inside themselves rather than pushing the page sideways. */
+.scroll { overflow-x: auto; }
+
+footer {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-quiet);
+  font-size: 0.85rem;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 0.05em 0.35em;
+}
