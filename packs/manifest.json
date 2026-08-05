@@ -1,9 +1,9 @@
 {
   "manifest_version": 1,
   "pack_id": "starter",
-  "revision": 2,
-  "url": "https://dsgvarun.github.io/still-life-picture-logic/packs/starter-2.json",
-  "sha256": "d772831f90d4f499332d984ce7d690e6ebace5d68c69c97f53e60559d28232ff",
-  "bytes": 232186,
-  "puzzles": 150
+  "revision": 3,
+  "url": "https://dsgvarun.github.io/still-life-picture-logic/packs/starter-3.json",
+  "sha256": "8298390fbc26898c6e13a27881538269b2c20b2ec4acca757ea0124fb30ed606",
+  "bytes": 295852,
+  "puzzles": 202
 }
