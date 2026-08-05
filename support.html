@@ -103,8 +103,9 @@
 <p>
   Please tell us — with the level number. Every puzzle is machine-checked before it ships: a solver has
   to prove that exactly one solution exists and that pure logic reaches it from a blank grid, and any
-  puzzle that fails is discarded rather than fixed. So this should be impossible. If it happens anyway we
-  want to know, because it means something upstream is wrong.
+  puzzle that fails is discarded rather than fixed. The app then re-checks every puzzle each time it
+  opens, and quietly leaves out anything that does not pass. So this should be impossible. If it happens
+  anyway we want to know, because it means something upstream is wrong.
 </p>
 
 <h3>The squares are too small on a large grid</h3>
